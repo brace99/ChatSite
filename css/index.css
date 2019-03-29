@@ -5,6 +5,7 @@ font-family: 'Poppins' , sans-serif;
 color:  #222 ;
 }
 
+
 /*HEADER*/
 .navbar-light { 
 border-bottom: 2px solid 	#D3D3D3;
@@ -30,16 +31,99 @@ cursor: pointer;
 
 /*Функциональная часть*/
 
-.chat-list {
-margin-top: 20px;
+/*Чат-лист*/
+.chat-container{
 display: flex;
 }
-.chat-list img {
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
+
+.chat-list {
+width: 30%;
+min-height: 500px;
 }
 
-.chat-img {
+.chat-block {
+width: 70%;
+}
+
+.chat-message {
+display: flex;
+border-bottom: 1px solid #D3D3D3;
+padding: 20px 20px 10px 20px;
+}
+
+.chat-message img {
+width: 60px;
+height: 60px;
+border-radius: 50%;
 margin-right: 20px;
 }
+
+.chat-message p {
+color: #D3D3D3;
+}
+
+.chat-date {
+margin-left: 20px;
+margin-top: 5px;
+}
+
+/*Рабочая часть*/
+
+.chat-block {
+display: flex;
+flex-direction: column;
+border-left: 1px solid #D3D3D3;
+}
+
+.message-block {
+height: 90%;
+background-color: #F4F7F4;
+}
+
+.message-block img {
+height: 60px;
+width: 60px;
+border-radius: 50%;
+}
+
+.writing-block {
+height: 10%;
+position: fixed;
+}
+
+.message-in-img {
+margin-left: 20px;
+}
+
+.message-out-img {
+margin-right: 20px;
+}
+
+.message {
+margin: 20px ;
+display: flex;
+justify-content: space-between;
+width: 600px;
+}
+
+.received-message {
+background-color: #C1E1FF;
+padding: 10px;
+border-radius: 15px;
+}
+
+.sent-message {
+background-color:#D3D8D5;
+padding: 10px;
+border-radius: 15px;
+}
+
+.time-date {
+white-space: pre;
+font-size: 12px;
+color: #D3D3D3;
+text-align: right;
+display: block;
+margin-top: 5px;
+}
+
