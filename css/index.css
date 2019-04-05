@@ -34,11 +34,13 @@ cursor: pointer;
 /*Чат-лист*/
 .chat-container{
 display: flex;
+border-bottom: 2px solid #D3D3D3;
+max-height: 500px;
 }
 
 .chat-list {
 width: 30%;
-min-height: 500px;
+overflow: auto;
 }
 
 .chat-block {
@@ -70,6 +72,7 @@ margin-top: 5px;
 /*Рабочая часть*/
 
 .chat-block {
+width: 70%;
 display: flex;
 flex-direction: column;
 border-left: 1px solid #D3D3D3;
@@ -78,6 +81,21 @@ border-left: 1px solid #D3D3D3;
 .message-block {
 height: 90%;
 background-color: #F4F7F4;
+border-bottom: 1px solid #D3D3D3;
+overflow: auto;
+}
+
+.message-in {
+display: flex;
+margin: 20px ;
+width: 600px;
+float: right;
+}
+
+.message-out {
+display: flex;
+margin: 20px ;
+width: 600px;
 }
 
 .message-block img {
@@ -97,13 +115,6 @@ margin-left: 20px;
 
 .message-out-img {
 margin-right: 20px;
-}
-
-.message {
-margin: 20px ;
-display: flex;
-justify-content: space-between;
-width: 600px;
 }
 
 .received-message {
@@ -127,3 +138,45 @@ display: block;
 margin-top: 5px;
 }
 
+/*Writting block*/
+
+.tool-block {
+display: flex;
+margin: 10px;
+}
+
+.tool-block i {
+font-size: 30px;
+}
+
+.tool-block i:hover {
+cursor: pointer;
+}
+
+.tool-block input {
+border: none;
+}
+
+.btn {
+border: none;
+}
+
+.chat-list {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+.chat-list::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.message-block {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+.message-block::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
